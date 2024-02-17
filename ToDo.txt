@@ -1,10 +1,12 @@
 To Do List
 
 - [ ] Support for Ria 
-- [ ] Support for Xoom
 - [ ] Creating a new Email and updating on SendGrip
 - [ ] Sending Mail updates
 - [ ] Add Date/Time in Subject
 - [ ] Sending mail if it crosses a particular amount
 
+Completed
+
 - [x] Support for Remitly
+- [x] Support for Xoom

@@ -15,7 +15,7 @@ public class ExchangeRateTrackerApplication {
 	@GetMapping("/")
 	public String printString() throws IOException{
 		Scrapper scrape = new Scrapper();
-		return "Remitly Rate: 1 USD = " + scrape.scrape();
+		return "Remitly Rate: 1 USD = " + scrape.remitlyScrape() + "<br>Xoom Rate:   " + scrape.xoomScrape();
 	}
 
 	public static void main(String[] args) throws IOException {
