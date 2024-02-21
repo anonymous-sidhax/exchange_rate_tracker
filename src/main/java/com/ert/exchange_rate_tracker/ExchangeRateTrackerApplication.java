@@ -19,13 +19,13 @@ import java.io.IOException;
 
 @SpringBootApplication
 @RestController
-@ComponentScan(basePackages = {"com.ert.utils.email_sender", "com.ert.exchange_rate_tracker"})
+// @ComponentScan(basePackages = {"com.ert.utils.email_sender", "com.ert.exchange_rate_tracker"})
 public class ExchangeRateTrackerApplication {
 
-	@Bean
-    public EmailSender emailSender() {
-        return new EmailSender();
-    }
+	// @Bean
+    // public EmailSender emailSender() {
+    //     return new EmailSender();
+    // }
 
 	@RequestMapping(value = "/sendemail")
     public String sendEmail() throws AddressException, MessagingException, IOException {
