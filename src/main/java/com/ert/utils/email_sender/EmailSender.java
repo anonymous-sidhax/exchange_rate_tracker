@@ -31,7 +31,7 @@ public class EmailSender
         {
 			protected PasswordAuthentication getPasswordAuthentication() 
             {
-				return new PasswordAuthentication(fromEmail, "bhsc lqau kcbh qgvp");
+				return new PasswordAuthentication(fromEmail, password);
 			}
 		};
 		Session session = Session.getInstance(props, auth);
