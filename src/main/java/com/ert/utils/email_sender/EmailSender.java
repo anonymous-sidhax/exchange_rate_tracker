@@ -9,6 +9,8 @@ import jakarta.mail.Session;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.ert.utils.misc.GetDateTime;
+
 @Component
 public class EmailSender 
 {
@@ -20,6 +22,8 @@ public class EmailSender
         
         final String fromEmail = "siddesh.0798@gmail.com";
 		final String toEmail = "siddesh.shewde@gmail.com";
+		final String charSet = "UTF-8";
+
 		
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "smtp.gmail.com");
@@ -36,6 +40,6 @@ public class EmailSender
 		};
 		Session session = Session.getInstance(props, auth);
 		
-		EmailUtil.sendEmail(session, toEmail,"Exchange Rate Tracker", "Test Email for Exchange Rate Tracker");
+		EmailUtil.sendEmail(session, toEmail, fromEmail, charSet, "Exchange Rate Tracker: " + new GetDateTime().getDateTime(), "Test Email for Exchange Rate Tracker");
     }
 }
