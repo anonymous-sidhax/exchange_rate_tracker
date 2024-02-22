@@ -4,6 +4,8 @@ To Do List
 - [ ] Add Date/Time in Subject
 - [ ] Using System Variable for password
 - [ ] Sending mail if it crosses a particular amount
+- [ ] Auto send email if it crosses threshold
+- [ ] Button for updating threshold
 
 Completed
 
