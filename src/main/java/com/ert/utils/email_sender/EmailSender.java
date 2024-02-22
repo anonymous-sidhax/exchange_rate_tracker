@@ -6,13 +6,19 @@ import jakarta.mail.Authenticator;
 import jakarta.mail.PasswordAuthentication;
 import jakarta.mail.Session;
 
-public class EmailSender
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmailSender 
 {
+	@Value("${email.password}")
+	private String password;
+
     public void sendMail()
     {
         
         final String fromEmail = "siddesh.0798@gmail.com";
-		final String password = "";
 		final String toEmail = "siddesh.shewde@gmail.com";
 		
 		Properties props = new Properties();
@@ -25,7 +31,7 @@ public class EmailSender
         {
 			protected PasswordAuthentication getPasswordAuthentication() 
             {
-				return new PasswordAuthentication(fromEmail, password);
+				return new PasswordAuthentication(fromEmail, "bhsc lqau kcbh qgvp");
 			}
 		};
 		Session session = Session.getInstance(props, auth);
